@@ -7,4 +7,3 @@ before install:
 
 script:
   - docker run -e CI=true arpan9889/docker-react yarn test
-  language: generic
