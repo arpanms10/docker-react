@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before install:
+  - docker build -t arpan9889/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true arpan9889/docker-react yarn test
+  language: generic
